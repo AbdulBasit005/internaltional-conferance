@@ -134,8 +134,117 @@
 					</div>
 				</div>
 				<!-- /nav -->
-			</header>
-            <!-- Footer -->
+            <section class="events-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="text-center">Our Events</h2>
+                            <div class="event-filter text-center" style="margin-bottom: 30px;">
+                                <button class="btn btn-default filter-btn active" data-filter="all">All</button>
+                                <button class="btn btn-default filter-btn" data-filter="conference">Conference</button>
+                                <button class="btn btn-default filter-btn" data-filter="workshop">Workshop</button>
+                                <button class="btn btn-default filter-btn" data-filter="seminar">Seminar</button>
+                            </div>
+                            <div class="row event-list">
+                                <div class="col-md-4 event-item" data-type="conference">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Conference+1" class="img-responsive" alt="Conference 1">
+                                        <h4>International Business Conference</h4>
+                                        <p>Date: 2024-08-10</p>
+                                        <p>Type: Conference</p>
+                                        <p>Join industry leaders to discuss global business trends and opportunities.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 event-item" data-type="workshop">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Workshop+1" class="img-responsive" alt="Workshop 1">
+                                        <h4>Digital Marketing Workshop</h4>
+                                        <p>Date: 2024-09-05</p>
+                                        <p>Type: Workshop</p>
+                                        <p>Hands-on training on the latest digital marketing strategies and tools.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 event-item" data-type="seminar">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Seminar+1" class="img-responsive" alt="Seminar 1">
+                                        <h4>Leadership Skills Seminar</h4>
+                                        <p>Date: 2024-07-20</p>
+                                        <p>Type: Seminar</p>
+                                        <p>Enhance your leadership abilities with expert speakers and interactive sessions.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 event-item" data-type="conference">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Conference+2" class="img-responsive" alt="Conference 2">
+                                        <h4>Annual Science Conference</h4>
+                                        <p>Date: 2024-10-15</p>
+                                        <p>Type: Conference</p>
+                                        <p>Explore the latest scientific discoveries and network with researchers worldwide.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 event-item" data-type="workshop">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Workshop+2" class="img-responsive" alt="Workshop 2">
+                                        <h4>Entrepreneurship Workshop</h4>
+                                        <p>Date: 2024-11-02</p>
+                                        <p>Type: Workshop</p>
+                                        <p>Learn how to start and grow your own business from successful entrepreneurs.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 event-item" data-type="seminar">
+                                    <div class="event-box">
+                                        <img src="https://placehold.co/400x180?text=Seminar+2" class="img-responsive" alt="Seminar 2">
+                                        <h4>Health & Wellness Seminar</h4>
+                                        <p>Date: 2024-12-12</p>
+                                        <p>Type: Seminar</p>
+                                        <p>Discover the secrets to a healthier lifestyle with leading health experts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                // Simple event filter
+                document.querySelectorAll('.filter-btn').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const filter = btn.getAttribute('data-filter');
+                        document.querySelectorAll('.event-item').forEach(function(item) {
+                            if (filter === 'all' || item.getAttribute('data-type') === filter) {
+                                item.style.display = '';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            </script>
+            <style>
+                .event-box {
+                    background: #fff;
+                    border: 1px solid #eee;
+                    padding: 20px;
+                    margin-bottom: 30px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+                    text-align: center;
+                }
+                .event-box img {
+                    max-width: 100%;
+                    height: 180px;
+                    object-fit: cover;
+                    margin-bottom: 15px;
+                    border-radius: 5px;
+                }
+                .event-filter .btn.active {
+                    background: #e64343;
+                    color: #fff;
+                    border-color: #e64343;
+                }
+            </style>  <!-- Footer -->
 			<footer class="footer-home-5" style="background: #0a0f3d;">
 				<div>
 					<div class="background-image" style="background: #0a0f3d ;"></div>
