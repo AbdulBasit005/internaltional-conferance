@@ -256,23 +256,27 @@ Join us, where learning feels like home — and your future begins with confiden
 											<h4>Company Links</h4>
 											<span class="bottom-title"></span>
 										</div>
-										<ul class="footer-list-news">
-											<li>
-												<a href="https://www.kangaroopakistan.org/">kangaroopakistan</a>
-											</li>
-											<li>
-												<a href="https://icccenter.com/">icccenter</a>
-											</li>
-											<li>
-												<a href="https://www.surrey.ac.uk/">University of surrey</a>
-											</li>
-											<li>
-												<a href="https://www.oscaredu.uk/">Oscar education</a>
-											</li>
-											<li>
-												<a href="https://iwiseeducation.com/">Iwise Education</a>
-											</li>
-										</ul>
+										<div class="footer-list-news" style="display: flex; flex-direction: column;">
+											<a href="https://www.kangaroopakistan.org/" class="footer-link">kangaroopakistan</a>
+											<a href="https://icccenter.com/" class="footer-link">icccenter</a>
+											<a href="https://www.surrey.ac.uk/" class="footer-link">University of surrey</a>
+											<a href="https://www.oscaredu.uk/" class="footer-link">Oscar education</a>
+											<a href="https://iwiseeducation.com/" class="footer-link">Iwise Education</a>
+											<style>
+											.footer-link {
+												text-decoration: none;
+												color: white;
+												transition: border-bottom 0.2s;
+												border-bottom: 2px solid transparent;
+												padding-bottom: 2px;
+											}
+											.footer-link:hover {
+												border-bottom: 2px solid white;
+												text-decoration: none;
+												color: white;
+											}
+											</style>
+										</div>
 									</div>
 								</div>
 							</div>
