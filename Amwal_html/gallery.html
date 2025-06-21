@@ -29,7 +29,50 @@
 		<!-- Favicons
 			================================================== -->
 		<link rel="shortcut icon" href="http://placehold.it/32x32/ccc.jpg">
-        <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+		<link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		/* Responsive adjustments for gallery */
+		@media (max-width: 991.98px) {
+			#gallery-grid .gallery-item {
+				width: 50% !important;
+				max-width: 50%;
+				flex: 0 0 50%;
+			}
+		}
+		@media (max-width: 767.98px) {
+			#gallery-grid .gallery-item {
+				width: 100% !important;
+				max-width: 100%;
+				flex: 0 0 100%;
+			}
+			#gallery-filters .btn {
+				width: 100%;
+				margin-bottom: 8px;
+			}
+			.gallery-section h2 {
+				font-size: 1.5rem;
+			}
+		}
+		@media (max-width: 575.98px) {
+			.gallery-section {
+				padding: 1.5rem 0 !important;
+			}
+			.gallery-section h2 {
+				font-size: 1.2rem;
+			}
+			#gallery-filters .btn {
+				font-size: 0.95rem;
+				padding: 8px 10px;
+			}
+		}
+		/* Ensure images are always responsive */
+		.gallery-section img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		</style>
 	</head>
 	<body class="royal_loader">
 		<!-- royal_loader -->
